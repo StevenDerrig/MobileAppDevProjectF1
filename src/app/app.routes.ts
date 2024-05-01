@@ -10,4 +10,20 @@ export const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full',
   },
+  {
+    path: 'news',
+    loadComponent: () => import('./news/news.page').then( m => m.NewsPage)
+  },
+  {
+    path: 'standings',
+    loadComponent: () => import('./standings/standings.page').then( m => m.StandingsPage)
+  },
+  {
+    path: 'track-info',
+    loadComponent: () => import('./track-info/track-info.page').then( m => m.TrackInfoPage)
+  },
+  {
+    path: 'current-info',
+    loadComponent: () => import('./current-info/current-info.page').then( m => m.CurrentInfoPage)
+  },
 ];
