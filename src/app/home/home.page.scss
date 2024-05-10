@@ -4,17 +4,17 @@
   position: absolute;
   left: 0;
   right: 0;
-  top: 50%;
+  top: 20%;
   transform: translateY(-50%);
 }
 
 #container strong {
-  font-size: 20px;
+  font-size: 50px;
   line-height: 26px;
 }
 
 #container p {
-  font-size: 16px;
+  font-size: 50px;
   line-height: 22px;
 
   color: #8c8c8c;
@@ -24,4 +24,31 @@
 
 #container a {
   text-decoration: none;
+}
+
+#button {
+  text-align: center;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+
+}
+#button ion-button {
+  --background: #00FFFF;
+  --color: #000000;
+  --border-radius: 20px;
+  --padding-start: 20px;
+  --padding-end: 20px;
+  --padding-top: 10px;
+  --padding-bottom: 10px;
+  --margin-top: 20px;
+  --margin-bottom: 20px;
+}
+//sizing the image
+ion-content {
+  --background: url('/assets/icon/f1_logo_4k_8k.jpg') no-repeat center center / 100% 100%;
 }

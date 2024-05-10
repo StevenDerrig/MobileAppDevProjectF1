@@ -1,13 +1,32 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>track-info</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" class="backDes"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Track Information 2024</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">track-info</ion-title>
+      <ion-title size="large">Track Information 2024</ion-title>
     </ion-toolbar>
   </ion-header>
+  <div>
+    <ion-card *ngFor="let circuit of tracks">
+      <ion-card-header>
+      <ion-card-title>
+        Name: &nbsp;&nbsp;
+        {{circuit.Circuit.circuitName}} - {{circuit.Circuit.Location.locality}}, {{circuit.Circuit.Location.country}}
+        <br>
+        Date and race time: &nbsp;&nbsp;
+        {{circuit.date}} - {{circuit.time}}
+        <br>
+        Location: &nbsp;&nbsp;
+        {{circuit.Circuit.Location.lat}}, {{circuit.Circuit.Location.long}}
+      </ion-card-title>
+      </ion-card-header>
+      </ion-card>
+  </div>
 </ion-content>

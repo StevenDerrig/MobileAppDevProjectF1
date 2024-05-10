@@ -11,10 +11,6 @@ export const routes: Routes = [
     pathMatch: 'full',
   },
   {
-    path: 'news',
-    loadComponent: () => import('./news/news.page').then( m => m.NewsPage)
-  },
-  {
     path: 'standings',
     loadComponent: () => import('./standings/standings.page').then( m => m.StandingsPage)
   },

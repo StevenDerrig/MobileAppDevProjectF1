@@ -14,6 +14,15 @@
   </ion-header>
 
   <div id="container">
-    Home page of the Formula 1 app
+    Formula 1 App, for the current 2024 season.
+  </div>
+  <div id="button">
+    <ion-button (click)="getBrowser()">Official F1 Website</ion-button>
+    <br>
+    <ion-button [routerLink]="['/standings']">Current Standings</ion-button>
+    <br>
+    <ion-button [routerLink]="['/track-info']">Track Info</ion-button>
+    <br>
+    <ion-button [routerLink]="['/current-info']">Current Info</ion-button>
   </div>
 </ion-content>

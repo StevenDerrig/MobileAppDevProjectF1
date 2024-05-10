@@ -1,13 +1,27 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>standings</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" class="backDes"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Standings</ion-title>
+    <!-- Toggle to switch between drivers and constructors -->
+    <ion-toggle [(ngModel)]="showConstructors" (click)="showConstructors = !showConstructors" slot="end"></ion-toggle>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">standings</ion-title>
+      <ion-title size="large">Standings</ion-title>
     </ion-toolbar>
   </ion-header>
+  <div>
+    <ion-card *ngFor="let item of (showConstructors ? constructors : drivers)">
+      <ion-card-header>
+      <ion-card-title>
+        {{item.position}} - {{item.Driver ? item.Driver.givenName : item.Constructor.name}} {{item.Driver ? item.Driver.familyName : ''}} {{item.points}}
+      </ion-card-title>
+      </ion-card-header>
+      </ion-card>
+  </div>
 </ion-content>
